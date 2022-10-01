@@ -21,7 +21,7 @@ class UserManager(BaseUserManager):
 
 class Client(AbstractBaseUser, PermissionsMixin):
     id = models.BigAutoField(primary_key=True)
-    username = models.CharField('Username', max_length = 15, unique=True)
+    username = models.CharField('Username', max_length = 24, unique=True)
     password = models.CharField('Password', max_length = 256)
     name = models.CharField('Name', max_length = 30)
     lastname = models.CharField('Lastname', max_length = 30)
