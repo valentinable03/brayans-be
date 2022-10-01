@@ -25,5 +25,5 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('userCreate/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    #path('booking/', views.Booking.as_view()),
+    path('booking/', views.BookingCreateView.as_view()),
 ]
