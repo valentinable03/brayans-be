@@ -25,5 +25,6 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('userCreate/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    path('booking/', views.BookingCreateView.as_view()),
+    path('bookingCreate/', views.BookingListCreateView.as_view()),
+    path('booking/<int:pk>/', views.BookingRetrieveUpddateView.as_view())
 ]

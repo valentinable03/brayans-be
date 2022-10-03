@@ -9,7 +9,7 @@ class ClientSerializer(serializers.ModelSerializer):
         model = Client
         fields = ['id', 'username', 'password', 'name', 'lastname', 'address', 'phone', 'email']
 
-    def create(self, validated_data):
+'''    def create(self, validated_data):
         
         clientInstance = Client.objects.create(**validated_data)
         
@@ -27,4 +27,4 @@ class ClientSerializer(serializers.ModelSerializer):
                     'phone': client.phone,
                     'email': client.email,
                     
-}
+}'''

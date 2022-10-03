@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
         return user
 
 class Client(AbstractBaseUser, PermissionsMixin):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True) #BigAuto para que se construya automaticamente
     username = models.CharField('Username', max_length = 24, unique=True)
     password = models.CharField('Password', max_length = 256)
     name = models.CharField('Name', max_length = 30)
