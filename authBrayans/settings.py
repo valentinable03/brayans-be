@@ -102,10 +102,10 @@ WSGI_APPLICATION = 'authBrayans.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dc8lhll6cgqpb',
-        'USER': 'xqljcjinrembxf',
-        'PASSWORD': 'c3c0a5ad45bc64bbe7df787ade9362d7241b70217c7fd4768dc55c752f6ebe83',
-        'HOST': 'ec2-34-200-205-45.compute-1.amazonaws.com',
+        'NAME': 'd1r6rueanq8ulk',
+        'USER': 'otqcegvsksrfpy',
+        'PASSWORD': '64dd9c1dd438a1e0d9da1decc2465f26fa8d5bfd10fffd40a6654d9444806bb2',
+        'HOST': 'ec2-54-175-79-57.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
