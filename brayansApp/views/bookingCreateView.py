@@ -12,7 +12,7 @@ from brayansApp.serializers.clientSerializer import ClientSerializer
 class BookingListCreateView(generics.ListCreateAPIView):
     queryset = Booking.objects.all() #modelo de booking
     serializer_class = BookingSerializer
-    permission_classes = (IsAuthenticated,) #se descomenta cuando termino de hacer pruebas
+    #permission_classes = (IsAuthenticated,) #se descomenta cuando termino de hacer pruebas
 
     def list(self, request):
         print("GET a todos los Booking")
@@ -34,15 +34,15 @@ class BookingListCreateView(generics.ListCreateAPIView):
         serializerEnf = BookingSerializer(data=enfData)      
         serializerEnf.is_valid(raise_exception=True)
         serializerEnf.save()
-        #return Response(status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_201_CREATED)
         
-        tokenData = {
+        '''tokenData = {
                        "username": request.data["username"],
                        "password": request.data["password"]
                        }
         tokenSerializer = TokenObtainPairSerializer(data=tokenData)
         tokenSerializer.is_valid(raise_exception=True)
-        return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED)
+        return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED)'''
  
 '''
     def post(self, request):
