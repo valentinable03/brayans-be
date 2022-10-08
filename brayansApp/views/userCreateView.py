@@ -10,10 +10,11 @@ class UserCreateView(views.APIView):
         serializer = ClientSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        return Response(status=status.HTTP_201_CREATED)
 
-        tokenData = {"username":request.data["username"],
+        '''tokenData = {"username":request.data["username"],
                     "password":request.data["password"]}
         tokenSerializer = TokenObtainPairSerializer(data=tokenData)
         tokenSerializer.is_valid(raise_exception=True)
         
-        return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED)
+        return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED)'''
